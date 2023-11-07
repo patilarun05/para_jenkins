@@ -1,9 +1,8 @@
 pipeline{
-
-    parameters { string(name: 'Maven_version', defaultValue: '3.9.4', description: '') }
+    parameters { string(name: 'Maven_version', defaultValue: '3.9.4', description: 'pass version') }
     agent any
     stages{
-        stage('Parameterized_job'){
+        stage('download maven'){
             steps{
                 echo 'Working on parameterize job'
                 sh 'cd /home'
