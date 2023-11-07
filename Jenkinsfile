@@ -3,7 +3,7 @@ pipeline{
     parameters { string(name: 'Maven_version', defaultValue: '3.9.4', description: '') }
     agent any
     stages{
-        stage(Parameterized job){
+        stage('Parameterized_job'){
             steps{
                 echo 'Working on parameterize job'
                 sh 'cd /home'
